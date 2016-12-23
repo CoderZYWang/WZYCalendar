@@ -168,7 +168,7 @@
     NSInteger year = [[NSDate date] dateYear];
     NSInteger month = [[NSDate date] dateMonth];
     
-    NSString *title = [NSString stringWithFormat:@"%ld年 %ld月", year, month];
+    NSString *title = [NSString stringWithFormat:@"%d年 %d月", (int)year, (int)month];
     [_calendarHeaderButton setTitle:title forState:UIControlStateNormal];
     
     // 进行滑动

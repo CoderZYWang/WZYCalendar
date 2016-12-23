@@ -183,7 +183,7 @@ static NSString *const kCellIdentifier = @"cell";
         
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0 alpha:0.87];
             
             // 标识今天
@@ -202,11 +202,11 @@ static NSString *const kCellIdentifier = @"cell";
         // 补上前后月的日期，淡色显示
         else if (indexPath.row < firstWeekday) {
             int totalDaysOflastMonth = [self.monthArray[3] intValue];
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", totalDaysOflastMonth - ((int)firstWeekday - (int)indexPath.row) + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         } else if (indexPath.row >= firstWeekday + totalDays) {
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday - (int)totalDays + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         }
@@ -224,7 +224,7 @@ static NSString *const kCellIdentifier = @"cell";
         
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0 alpha:0.87];
             cell.userInteractionEnabled = YES;
             
@@ -245,12 +245,12 @@ static NSString *const kCellIdentifier = @"cell";
         else if (indexPath.row < firstWeekday) {
             WZYCalendarMonth *lastMonthInfo = self.monthArray[0];
             NSInteger totalDaysOflastMonth = lastMonthInfo.totalDays;
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)totalDaysOflastMonth - ((int)firstWeekday - (int)indexPath.row) + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
             cell.userInteractionEnabled = NO;
         } else if (indexPath.row >= firstWeekday + totalDays) {
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday - (int)totalDays + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
             cell.userInteractionEnabled = NO;
@@ -265,7 +265,7 @@ static NSString *const kCellIdentifier = @"cell";
         // 当前月
         if (indexPath.row >= firstWeekday && indexPath.row < firstWeekday + totalDays) {
             
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday + 1];
             cell.todayLabel.textColor = [UIColor colorWithWhite:0 alpha:0.87];
             
             // 标识今天
@@ -284,11 +284,11 @@ static NSString *const kCellIdentifier = @"cell";
         } else if (indexPath.row < firstWeekday) {
             WZYCalendarMonth *lastMonthInfo = self.monthArray[1];
             NSInteger totalDaysOflastMonth = lastMonthInfo.totalDays;
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", totalDaysOflastMonth - (firstWeekday - indexPath.row) + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)totalDaysOflastMonth - ((int)firstWeekday - (int)indexPath.row) + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         } else if (indexPath.row >= firstWeekday + totalDays) {
-            cell.todayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - firstWeekday - totalDays + 1];
+            cell.todayLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row - (int)firstWeekday - (int)totalDays + 1];
             cell.todayLabel.textColor = CURRENTHEXCOLOR(0xADADAD);
             cell.todayCircle.backgroundColor = [UIColor clearColor];
         }
