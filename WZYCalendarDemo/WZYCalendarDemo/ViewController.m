@@ -36,6 +36,8 @@
     // 传入Calendar的origin和width。自动计算控件高度
     WZYCalendarView *calendar = [[WZYCalendarView alloc] initWithFrameOrigin:origin width:width];
     
+    NSLog(@"height --- %lf", calendar.frame.size.height);
+    
     // 点击某一天的回调
     calendar.didSelectDayHandler = ^(NSInteger year, NSInteger month, NSInteger day) {
         
