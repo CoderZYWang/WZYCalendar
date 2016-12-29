@@ -23,9 +23,7 @@
     self.title = @"WZYCalendar";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
     [self setupCalendar]; // 初始化日历对象
-    
 }
 
 - (void)setupCalendar {
@@ -48,7 +46,6 @@
     };
     
     [self.view addSubview:calendar];
-    
 }
 
 @end
